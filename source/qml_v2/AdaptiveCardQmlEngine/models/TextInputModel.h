@@ -10,7 +10,7 @@
 class TextInputModel : public QObject
 {
     Q_OBJECT
-  
+
     Q_PROPERTY(QString label MEMBER mLabel CONSTANT)
     Q_PROPERTY(QString errorMessage MEMBER mErrorMessage CONSTANT)
     Q_PROPERTY(QString placeholder MEMBER mPlaceHolder CONSTANT)
@@ -20,6 +20,7 @@ class TextInputModel : public QObject
     Q_PROPERTY(bool isVisible MEMBER mIsVisible CONSTANT)
     Q_PROPERTY(bool isRequired MEMBER mIsRequired CONSTANT)
     Q_PROPERTY(bool heightStreched MEMBER mHeightStreched CONSTANT)
+    Q_PROPERTY(bool isMultiLineText MEMBER mIsMultiLineText CONSTANT)
 
     Q_PROPERTY(int maxLength MEMBER mMaxLength CONSTANT)
 
@@ -31,12 +32,13 @@ private:
     QString mLabel;
     QString mErrorMessage;
     QString mPlaceHolder;
-    QString mValue; 
+    QString mValue;
     QString mRegex;
 
     bool mIsVisible;
     bool mIsRequired;
     bool mHeightStreched;
+    bool mIsMultiLineText;
 
     int mMaxLength;
 };
